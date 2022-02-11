@@ -40,7 +40,7 @@ public class Radio {
 
     public int getCurrentVolume() {// геттер норм
         return currentVolume;
-    }
+    }// геттер звук
 
     public void setCurrentVolume(int currentVolume) {// Сеттер на звук
         if (currentVolume < 0) {

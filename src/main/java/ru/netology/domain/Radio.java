@@ -19,23 +19,24 @@ public class Radio {
         this.currentStation = currentStation;//
     }
 
-    public int next(int currentStation) {// Следующая станция
+    public void next() {// Следующая станция
         if (currentStation == 9) {
             setCurrentStation(currentStation = 0);
         } else {
             this.currentStation = currentStation + 1;
         }
-        return currentStation;
     }
 
-    public int prev(int currentStation) {// Предыдущ станция
+    public void prev() {// Предыдущ станция
         if (currentStation == 0) {
             setCurrentStation(currentStation = 9);
         } else {
             this.currentStation = currentStation - 1;
         }
-        return currentStation;
     }
+
+
+
 
     public int getCurrentVolume() {// геттер норм
         return currentVolume;
@@ -51,22 +52,16 @@ public class Radio {
         this.currentVolume = currentVolume;//
     }
 
-    public int increaseVolume(int currentVolume) {// Увеличить громкость
-        if (this.currentVolume < 10) {
-            this.currentVolume = this.currentVolume + 1;
-        } else {
-            this.currentVolume= this.currentVolume;
+    public void  increaseVolume() {// Увеличить громкость
+        if (currentVolume < 10) {
+            currentVolume = currentVolume + 1;
         }
-        return currentVolume;
     }
 
-    public int decreaseVolume(int currentVolume) {// Уменьшить громкость
-        if (this.currentVolume > 0) {
-            this.currentVolume = this.currentVolume - 1;
-        } else {
-            this.currentVolume = this.currentVolume;
+    public void  decreaseVolume() {// Уменьшить громкость
+        if (currentVolume > 0) {
+            currentVolume = currentVolume - 1;
         }
-        return currentVolume;
     }
 
 
